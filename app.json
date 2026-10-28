@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "MedTime",
+    "slug": "medtime",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "medtime",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "color": "#0F766E",
+          "defaultChannel": "medtime-reminders",
+          "enableRemoteNotifications": false
+        }
+      ],
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ],
+    "android": {
+      "permissions": [
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

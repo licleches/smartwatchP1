@@ -1,0 +1,8 @@
+-- Deprecated proposal kept as an index for older notes.
+--
+-- Do not execute this file. The previous design incorrectly required a user
+-- before the watch could start pairing and assumed a public.dispositivos
+-- schema that is not confirmed in this repository.
+--
+-- Use database/migrations/watch_pairing.sql instead. It creates isolated,
+-- private watch_* tables and leaves public.dispositivos untouched.

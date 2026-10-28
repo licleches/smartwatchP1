@@ -1,0 +1,30 @@
+# Supabase Edge Function gateway settings.
+# Mobile-only functions keep the normal Supabase JWT check. The watch uses its
+# own short-lived/device credential, so those functions validate it explicitly.
+
+# Funciones utilizadas por el smartwatch
+[functions.watch-pair-start]
+verify_jwt = false
+
+[functions.watch-pair-status]
+verify_jwt = false
+
+[functions.watch-dose-update]
+verify_jwt = false
+
+[functions.watch-pair-preview]
+verify_jwt = true
+
+[functions.watch-pair-approve]
+verify_jwt = true
+
+# Funciones utilizadas por MedTime Mobile
+
+[functions.watch-devices-list]
+verify_jwt = true
+
+[functions.watch-device-revoke]
+verify_jwt = true
+
+[functions.watch-doses-list]
+verify_jwt = false
